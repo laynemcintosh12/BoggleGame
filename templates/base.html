@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/app.css" rel="stylesheet">
+    <title>Boggle</title>
+</head>
+<body>
+    <div id="boggle">
+        <div class="scoreContainer">
+            <p> High Score: 
+                <b>{{ highscore }}</b> 
+                in {{ numPlays }} plays
+            </p>
+            <p>
+                Score: <b class="score">0</b>
+                Seconds Left: <b class="timer"></b>
+            </p>
+        </div>
+        <table class="game_board">
+            <tbody>
+                {% for row in board %}
+                <tr>
+                    {% for elem in row%}
+                    <td>{{elem}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="messageList">
+            <form class="guessForm" method="POST">
+                <p>Add your guess!</p>
+                <input type="text" name="guess" class="guess" placeholder="Guess">
+                <button id="submitBtn">Submit</button>
+            </form>
+            <p class="jsMessage"></p>
+            <ul class="words"></ul>
+        </div>
+    </div>
+    <script src="http://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="/static/app.js"></script>
+    <script>
+        let game = new BoggleGame("boggle", 60);
+    </script>
+</body>
+</html>

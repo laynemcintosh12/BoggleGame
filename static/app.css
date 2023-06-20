@@ -1,0 +1,59 @@
+body {
+    background: #48b8bde0;
+    display: flex;
+    justify-content: center;
+}
+
+table.game_board {
+    background: #49536a;
+    font-size: 35px;
+    border-radius: 15px;
+    margin-left: 90px;
+}
+
+td {
+    border: solid 1px #93e8edb3;
+    color: white;
+    border-radius: 15px;
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreContainer {
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #49536a;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 20vw;
+    margin-left: 175px;
+    color:white;
+}
+
+.jsMessage {
+    font-size: 20px;
+    color: white;
+}
+
+.words {
+    font-size: 20px;
+    color: white;
+}
+
+.guessForm {
+    font-size: 20px;
+    color: white;
+}
+
+.messageList {
+    background-color: #49536a;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 10px;
+    width: 40vw;
+    text-align: center;
+}
